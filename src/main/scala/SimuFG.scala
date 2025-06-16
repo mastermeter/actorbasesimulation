@@ -4,13 +4,13 @@ import scala.util.Random
 
 object SimuFG extends App{
 
-  val step = 100
-  val cellSize = 10
-  val w = 100
-  val h = 100
+  val step = 1000
+  val w = 200
+  val h = 200
+  val cellSize = w/100
   val window = FunGraphics(w * cellSize, h * cellSize, "Simulation Forêt - FunGraphics")
 
-  // Implicite pour la probabilité
+
   var grid: GridSim = GridSim.randomGrid(w, h)
 
   def drawGrid(g: GridSim): Unit = {
@@ -21,7 +21,7 @@ object SimuFG extends App{
     } {
       val color = g.grid(i)(j) match {
         case Tree_Cell()  => java.awt.Color.GREEN
-        case Fire_Cell()  => java.awt.Color.RED
+        case Fire_Cell(a)  => java.awt.Color.RED
         case Empty_Cell() => java.awt.Color.DARK_GRAY
       }
       window.setColor(color)
@@ -31,6 +31,5 @@ object SimuFG extends App{
    for ( i <- 0 to step) {
      drawGrid(grid)
      grid = grid.updateGrid()
-     Thread.sleep(100)
    }
 }
