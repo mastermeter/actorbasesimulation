@@ -5,7 +5,7 @@ Pour run la simulation : run le fichier *Visu*
 
 Pour run les mesures : run le fichier *SimuStats*
 
-![output](https://github.com/user-attachments/assets/d82baf31-a140-4609-a2b6-5742103bab36)
+![output](https://github.com/user-attachments/assets/cec9ab41-e2c1-427d-9f0f-91a4c14d2483)
 
 https://github.com/user-attachments/assets/84fe7e04-9344-4308-8210-b039827b60ac
 
